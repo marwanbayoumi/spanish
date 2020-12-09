@@ -19,9 +19,9 @@ return (
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
 
-      <ul>
-        {notes.map(e => <li>{e.spanish}, {e.english}</li>)}
-      </ul>
+      <div>
+        {notes.map(e => <p>{e.spanish}: {e.english}</p>)}
+      </div>
 
 
     </header>

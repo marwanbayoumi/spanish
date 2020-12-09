@@ -12,6 +12,7 @@ const tables = ["nouns", "adjectives", "prepositions"];
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/:table', (req, res) => {
+  
   if (tables.includes(req.params.table)) {
     res.set('Access-Control-Allow-Origin', '*');
     connection.getContents(req.params.table, (err, data) => {
